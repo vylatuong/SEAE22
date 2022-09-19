@@ -1,5 +1,7 @@
 import sys
 
+# Comment for checking that commit works.
+
 # This is the main function for controlling the flow of the
 # implementation.
 def main():
