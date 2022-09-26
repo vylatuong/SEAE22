@@ -64,6 +64,7 @@ class TestSensors(unittest.TestCase):
         # If you want to see what is in mock_print, you can use the following
         # (requires that there is import sys as this module has because this
         # test case sets the command line arguments that are in sys.argv)
+        #
         # sys.stdout.write(str(mock_print.call_args) + "\n")
         # sys.stdout.write(str(mock_print.call_args_list) + "\n")
 
