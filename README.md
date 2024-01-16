@@ -1,2 +1,2 @@
-# SEAE21
+# SEAE22
 Software Engineering AE22
