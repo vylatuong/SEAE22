@@ -1,7 +1,5 @@
 import sys
 
-# Comment for checking that commit works.
-
 # This is the main function for controlling the flow of the
 # implementation.
 def main():
@@ -11,9 +9,8 @@ def main():
     if len(limits) > 0 and check_limits(limits):
         sensor_data = read_sensors()
         # This is a mockup code that prints the sensor readings
-        # to console. To be replaced with actual implementation
-        # (whatever that might be according to the low level design,
-        # for example).
+        # to console. Would be replaced with actual implementation
+        # (whatever it might be according to the low level design).
         for row in sensor_data:
             print (row)
     else:
@@ -49,13 +46,15 @@ def check_limits(limits):
 # sensor) for development and testing. To be replaced with an actual
 # implementation.
 def read_sensors():
-    return [
+    return  [
             [21.2, 18.2, 18.2, 22.2],
             [-5.0, -4.2, -3.9, -4.5],
             [1.2, 0.0, 0.5, -0.8, -1.0],
-            [25.0, -4.2, -13.9, 4.5]]
+            [25.0, -4.2, -13.9, 4.5]
+            ]
 
 # Other parts of the implementation such as printing the information
-# for the operator are also missing and to be implemented.
+# for the operator are also missing and would need to be implemented.
 
-main()
+if (__name__ == "__main__"):
+    main()
