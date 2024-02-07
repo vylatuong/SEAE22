@@ -24,11 +24,16 @@ class TestSensors(unittest.TestCase):
     # expects the method to return False, since the limits are
     # incorrect.
     def test_check_limits2(self):
-        pass
-        # TODO: implement the actual test case code
-    
-    # TODO: Implement Test case test_check_limits3 (UT3) according to your
+        limits = [22, 18]
+        result = sensors_main.check_limits(limits)
+        self.assertFalse(result, False)
+ 
+    #Test case test_check_limits3 (UT3) according to your
     # plan here. 
+    def test_check_limits3(self):
+        limits = [20, 20]
+        result = sensors_main.check_limits(limits)
+        self.assertFalse(result, False)
 
     ##########################
     # Integration test cases #
@@ -40,9 +45,11 @@ class TestSensors(unittest.TestCase):
     # NOTE: Redirect console output to sys.stdout in order to check it
     # from the test cases (here, from the integration test case). Also, use
     # mock_print as a parameter of the test case function.
-    @patch('builtins.print')
-    def test_check_limits_integration1(self, mock_print):
-        pass
+
+    #@patch('builtins.print')
+    #def test_check_limits_integration1(self, mock_print):
+    #    pass
+
         # 1. set command line parameters, since they are where main gets the
         # min and max temperature settings
 
