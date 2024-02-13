@@ -39,23 +39,25 @@ class TestSensors(unittest.TestCase):
     # Integration test cases #
     ##########################
 
-    # TODO: Complete test case test_check_limits_integration1 code so
-    # that tests the check_limits function from main function.
+    # Completed test case test_check_limits_integration1 code so
+    # that it tests the check_limits function from main function.
 
     # NOTE: Redirect console output to sys.stdout in order to check it
     # from the test cases (here, from the integration test case). Also, use
     # mock_print as a parameter of the test case function.
 
-    #@patch('builtins.print')
-    #def test_check_limits_integration1(self, mock_print):
-    #    pass
+    @patch('builtins.print')
 
+    def test_check_limits_integration1(self, mock_print):
         # 1. set command line parameters, since they are where main gets the
         # min and max temperature settings
-
+        sys.argv = [["sensors_main.py"], [22], [18]]
+        
         # 2. call main with the command line parameters set up
+        sensors_main.main()
 
         # 3. check that the console output is the expected error message
+        mock_print.assert_called_with("Error: Incorrect command line arguments.")
 
         # 4. If you want to see what is in mock_print, you can use the following
         # (requires that there is import sys (as this module has) because this
